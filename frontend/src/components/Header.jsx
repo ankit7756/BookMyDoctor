@@ -47,7 +47,7 @@ const Header = () => {
                             </a>
 
                             <a
-                                href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
+                                href="https://www.youtube.com/watch?v=iXbq6A_Tqxc&t=502s"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 bg-white hover:bg-gray-50 transition-colors text-gray-800 px-6 py-4 rounded-xl font-medium border border-gray-200 shadow-sm hover:shadow-md transform hover:scale-105"
