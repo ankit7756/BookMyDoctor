@@ -47,7 +47,6 @@ const Navbar = () => {
                     </li>
                 </NavLink>
             </ul>
-
             <div className="flex items-center gap-4">
                 {token && userData ? (
                     <div className="relative flex items-center gap-2 cursor-pointer group">
