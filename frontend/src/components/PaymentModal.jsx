@@ -25,7 +25,6 @@ const PaymentModal = ({ isOpen, onClose, onConfirm }) => {
                 <div className="text-center flex flex-col gap-6">
                     <p className="font-medium text-gray-700">BookMyDoctor Official eSewa</p>
 
-                    {/* Added more CSS utilities to remove any possible borders/lines */}
                     <div className="flex justify-center"> {/* Wrapper div to center the image */}
                         <img
                             src={assets.qrLogo}
