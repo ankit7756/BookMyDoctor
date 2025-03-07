@@ -20,7 +20,6 @@ const authAdmin = async (req, res, next) => {
         if (decoded.email !== process.env.ADMIN_EMAIL) {
             return res.status(403).json({ success: false, message: "Not Authorized, Login again!" });
         }
-
         req.admin = decoded;
         next();
     } catch (error) {
