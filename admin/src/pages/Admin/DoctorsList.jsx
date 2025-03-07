@@ -180,7 +180,6 @@ const DoctorsList = () => {
         </motion.div>
       </div>
 
-      {/* Spacer for Footer */}
       <div className="h-24"></div>
 
       <style jsx>{`
