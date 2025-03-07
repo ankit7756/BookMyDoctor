@@ -30,7 +30,6 @@ const Doctors = () => {
 
     useEffect(() => {
         applyFilter();
-        // Scroll to top when the page loads
         window.scrollTo(0, 0);
     }, [doctors, speciality]);
 
@@ -79,7 +78,6 @@ const Doctors = () => {
                                 </svg>
                                 Medical Specialties
                             </h3>
-
                             <button
                                 className={`py-2.5 px-4 w-full mb-4 rounded-xl font-medium text-left flex items-center justify-between lg:hidden border ${showFilter ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-200'}`}
                                 onClick={() => setShowFilter(prev => !prev)}
@@ -90,7 +88,6 @@ const Doctors = () => {
                                 </svg>
                             </button>
 
-                            {/* Scrollable specialties menu */}
                             <div className={`transition-all duration-300 ${showFilter ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0 lg:max-h-96 lg:opacity-100'} overflow-y-auto pr-1`}>
                                 <div className="space-y-3">
                                     <div
@@ -239,7 +236,6 @@ const Doctors = () => {
                 </div>
             </div>
 
-            {/* Spacer between content and footer */}
             <div className="h-16"></div>
 
             <style jsx>{`
