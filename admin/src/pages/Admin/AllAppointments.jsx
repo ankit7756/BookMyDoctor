@@ -8,7 +8,6 @@ const AllAppointments = () => {
   const { adminToken, appointments, getAllAppointments, cancelAppointment } = useContext(AdminContext);
   const { calculateAge, slotDateFormat, currency } = useContext(AppContext);
 
-  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -50,7 +49,6 @@ const AllAppointments = () => {
       animate="visible"
       variants={fadeIn}
     >
-      {/* Decorative Elements */}
       <div className="absolute inset-0 bg-pattern opacity-5"></div>
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-gradient-to-tl from-blue-400/20 to-transparent rounded-full blur-3xl"></div>
@@ -157,7 +155,6 @@ const AllAppointments = () => {
         </motion.div>
       </div>
 
-      {/* Spacer for Footer */}
       <div className="h-24"></div>
 
       <style jsx>{`
