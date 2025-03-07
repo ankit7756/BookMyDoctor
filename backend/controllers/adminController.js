@@ -6,7 +6,6 @@ import Doctor from "../models/doctorModel.js";
 import Appointment from "../models/appointmentModel.js";
 import User from "../models/userModel.js";
 
-// Helper function for validation
 const validateDoctorData = ({ name, email, password, experience, about, fees, speciality, degree, address }) => {
   if (!name || !email || !password || !experience || !about || !speciality || !degree || !fees || !address) {
     return "Missing required fields.";
@@ -74,10 +73,9 @@ export const loginAdmin = async (req, res) => {
 
 export const allDoctors = async (req, res) => {
   try {
-    // Using findAll instead of find since we're using Sequelize
     const doctors = await Doctor.findAll({
       attributes: {
-        exclude: ['password'] // Excluding password from the results
+        exclude: ['password']
       }
     });
 
@@ -95,25 +93,6 @@ export const allDoctors = async (req, res) => {
 };
 
 
-// export const appointmentsAdmin = async (req, res) => {
-//   try {
-//     // Using Sequelize findAll with associations
-//     const appointments = await Appointment.findAll({
-//       include: [
-//         { model: User, as: 'user' },
-//         { model: Doctor, as: 'doctor' }
-//       ],
-//       order: [['createdAt', 'DESC']]
-//     });
-
-//     res.json({ success: true, appointments });
-//   } catch (error) {
-//     console.log(error);
-//     res.json({ success: false, message: error.message });
-//   }
-// };
-
-// Get all appointments
 export const appointmentsAdmin = async (req, res) => {
   try {
     // Using Sequelize findAll without specifying aliases
@@ -167,34 +146,6 @@ export const appointmentCancelled = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
-
-// // Admin dashboard data
-// export const adminDashboard = async (req, res) => {
-//   try {
-//     // Count doctors, users, and appointments
-//     const doctors = await Doctor.findAll();
-//     const users = await User.findAll();
-//     const appointments = await Appointment.findAll({
-//       include: [
-//         { model: Doctor, as: 'doctor' },
-//         { model: User, as: 'user' }
-//       ],
-//       order: [['createdAt', 'DESC']]
-//     });
-
-//     const dashData = {
-//       doctors: doctors.length,
-//       appointments: appointments.length,
-//       patients: users.length,
-//       latestAppointment: appointments.slice(0, 5)
-//     };
-
-//     res.json({ success: true, dashData });
-//   } catch (error) {
-//     console.log(error);
-//     res.json({ success: false, message: error.message });
-//   }
-// };
 
 
 // Admin dashboard data
