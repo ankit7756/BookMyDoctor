@@ -8,7 +8,6 @@ const AppContextProvider = ({ children }) => {
     const currencySymbol = "$";
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const [doctors, setDoctors] = useState([]);
-    // const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : false);
     const [token, setToken] = useState(() => {
         const savedToken = localStorage.getItem('token');
         return savedToken || false;
@@ -19,7 +18,6 @@ const AppContextProvider = ({ children }) => {
             const { data } = await axios.get(backendUrl + "/api/doctor/list");
             if (data.success) {
                 setDoctors(data.doctors);
-                // console.log(data.doctors)
             } else {
                 toast.error(data.message);
             }
