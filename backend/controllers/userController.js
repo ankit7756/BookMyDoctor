@@ -10,7 +10,6 @@ const registerUser = async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
-        // Input validation
         if (!name || !email || !password) {
             return res.json({ success: false, message: "Missing Credentials" });
         }
