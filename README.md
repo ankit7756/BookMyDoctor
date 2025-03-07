@@ -3,7 +3,7 @@
 ## Overview
 BookMyDoctor is a web-based healthcare management platform designed to streamline appointment scheduling, doctor management, and administrative tasks for healthcare providers and administrators. The platform aims to simplify the process of booking appointments, managing doctors, and overseeing healthcare operations, providing an efficient and user-friendly solution for medical practices.
 
-This project was developed as part of the ST5007CEM Web Development module at Softwarica College of IT & E-Commerce. It showcases the practical application of modern web development technologies, including the PERN stack (PostgreSQL, Express.js, React.js, Node.js).
+This project was developed as part of the ST5007CEM Web Development module at Softwarica College of IT & E-Commerce by Ankit Sharma. It showcases the practical application of modern web development technologies, including the PERN stack (PostgreSQL, Express.js, React.js, Node.js).
 
 ## Features of BookMyDoctor
 - **Appointment Scheduling**: Users can easily book, view, and manage appointments with doctors through a centralized system.
