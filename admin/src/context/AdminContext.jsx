@@ -23,7 +23,7 @@ const AdminContextProvider = ({ children }) => {
 
       if (data.success) {
         setDoctors(data.doctors);
-        console.log("Fetched doctors:", data.doctors); // Debug log
+        console.log("Fetched doctors:", data.doctors);
       } else {
         toast.error(data.message);
       }
@@ -73,7 +73,7 @@ const AdminContextProvider = ({ children }) => {
 
   const cancelAppointment = async (appointmentId) => {
     try {
-      console.log("Cancelling appointment with ID:", appointmentId); // Debug log
+      console.log("Cancelling appointment with ID:", appointmentId);
 
       const { data } = await axios.post(
         `${backendUrl}/api/admin/cancel-appointment`,
@@ -88,7 +88,6 @@ const AdminContextProvider = ({ children }) => {
       if (data.success) {
         toast.success(data.message);
         getAllAppointments();
-        // Also refresh dashboard data if on dashboard
         if (window.location.pathname.includes('dashboard')) {
           getDashData();
         }
