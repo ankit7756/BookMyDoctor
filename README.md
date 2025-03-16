@@ -33,4 +33,4 @@ Traditional healthcare management often involves manual appointment booking, fra
 
 ### Database Technologies
 - **Database**: PostgreSQL
-- **ORM**: Seualize ORM for efficient data modeling and relationships
+- **ORM**: Sequalize ORM for efficient data modeling and relationships
